@@ -5,12 +5,15 @@ class Factorial{
      if (num == 0)    
        return 1;    
      else    
-       return(num * factorial(n-1));    
+       return(num * factorial(num - 1));    
     }    
     public static void main(String args[]){  
-     int i, fact=1;  
+     int fact=1;  
+     Scanner keyboard = new Scanner(System.in);
+     System.out.println("Enter number to calculate factorial of"); 
      int number = keyboard.nextInt();  
      fact = factorial(number);   
+     keyboard.close();
      System.out.println("Factorial of "+number+" is: "+fact);    
     }  
    }  
